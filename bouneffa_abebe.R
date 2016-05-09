@@ -3,17 +3,27 @@
 #Bouneffa Massinissa p1310939
 
 
+
+#Variables globales
+Working_dir = "C:\\Users\\Massi\\Desktop\\L3\\Stats\\projet\\projet"
+setwd(Working_dir)
+enquete_6m=read.csv("enquete6mois.csv",header = TRUE, dec = ".", sep = ";", na.strings = "NC")
+enquete_18m=read.csv("enquete18mois.csv",header = TRUE, dec = ".", sep = ";", na.strings = "NC")
+
 #EXO 1
-setwd("C:\\Users\\tfano_000\\Documents\\L3\\stat\\projet")
-??csv
-a=read.csv("enquete6mois.csv",header = TRUE, dec = ".", sep = ";", na.strings = "NC")
-(a)
-table(a)
-summary(a)
-plot(a$enactivite,  col=rainbow(2))
-barplot(a$enactivite, col=rainbow(2))
-plot(a$cadre,  col=rainbow(2))
-hist(a$cadre, col=rainbow(2))
-plot(a$contrat)
-hist(a$salaire)
-boxplot(a$salaire)
+par(mfrow=c(2,2))
+(enquete_6m)
+table(enquete_6m)
+summary(enquete_6m)
+plot(enquete_6m$contrat)
+hist(enquete_6m$salaire)
+boxplot(enquete_6m$salaire)
+
+(enquete_18m)
+table(enquete_18m)
+summary(enquete_18m)
+plot(enquete_18m$contrat)
+hist(enquete_18m$salaire.1.an)
+boxplot(enquete_18m$salaire.embauche)
+
+
