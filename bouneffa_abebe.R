@@ -103,7 +103,5 @@ t.test(enquete_18m$salaire.embauche, conf.level = 0.99)$conf.int
 mean(enquete_6m$salaire, na.rm = TRUE)
 mean(enquete_18m$salaire.embauche, na.rm = TRUE)
 
-par(mfrow=c(1,2)) #Pour représenter sur un même cadre
-boxplot(enquete_6m$salaire, main = "Après 6 mois")
-boxplot(enquete_18m$salaire.embauche, main = "Après 18 mois")
+boxplot(enquete_6m$salaire, enquete_18m$salaire.embauche , main = "Salaires à 6 et 18 mois")
 
