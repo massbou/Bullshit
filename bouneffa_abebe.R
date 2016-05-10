@@ -33,6 +33,14 @@ summary(enquete_18m$cadre)
 table(enquete_18m$cadre)
 
 
+#QUESTION 4
 
+hist(enquete_6m$salaire, main = "Histogramme Salaire embauche après 6 mois")
+boxplot(enquete_6m$salaire, main = "Boxplot Salaire embauche après 6 mois")
+summary(enquete_6m$salaire)
+
+hist(enquete_18m$salaire.embauche, main = "Histogramme Salaire embauche après 18 mois")
+boxplot(enquete_18m$salaire.embauche, main = "Boxplot Salaire embauche après 18 mois")
+summary(enquete_18m$salaire.embauche)
 
 
