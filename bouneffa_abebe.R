@@ -9,16 +9,28 @@ Working_dir = "C:\\Users\\Massi\\Desktop\\L3\\Stats\\projet\\projet"
 setwd(Working_dir)
 enquete_6m=read.csv("enquete6mois.csv",header = TRUE, dec = ".", sep = ";", na.strings = "NC")
 enquete_18m=read.csv("enquete18mois.csv",header = TRUE, dec = ".", sep = ";", na.strings = "NC")
-
-#QESTION 1
 par(mfrow=c(2,2))
 
-summary(enquete_6m)
+#QUESTION 1
+
 hist(enquete_6m$enactivite, main = "En activité après 6 mois")
+summary(enquete_6m$enactivite)
+table(enquete_6m$enactivite)
 
-summary(enquete_18m)
 hist(enquete_18m$en.activite, main = "En activité après 18 mois")
+summary(enquete_18m$en.activite)
+table(enquete_18m$en.activite)
 
+#QUESTION 2
+
+
+hist(enquete_6m$cadre, main = "Cadres après 6 mois")
+summary(enquete_6m$cadre)
+table(enquete_6m$cadre)
+
+hist(enquete_18m$cadre, main = "Cadres après 18 mois")
+summary(enquete_18m$cadre)
+table(enquete_18m$cadre)
 
 
 
